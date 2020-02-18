@@ -5,8 +5,10 @@
 // Email : 831066972@cs.colostate.edu
 
 public class Circle extends Primitive {
+	
 	private int color, x, y, radius;
 	private boolean isFilled;
+	
 	public Circle(int x, int y, int radius) {
 		this.x = x;
 		this.y =y;
@@ -19,6 +21,11 @@ public class Circle extends Primitive {
 		this.isFilled =isFilled; 
 	}
 	public void draw(UserInterface ui) {
+		if (isFilled)
+			ui.fillColor(color);
+		else
+			ui.lineColor(color);
+		
 		ui.drawOval(x, y, (radius*2), (radius*2), isFilled);
 	}
 

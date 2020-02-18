@@ -5,6 +5,7 @@
 // Email : 831066972@cs.colostate.edu
 
 public class Oval extends Primitive {
+	
 	private int color, x, y, width, height;
 	private boolean isFilled;
 	public Oval(int x, int y, int width, int height) {
@@ -20,6 +21,12 @@ public class Oval extends Primitive {
 		this.isFilled =isFilled; 
 	}
 	public void draw(UserInterface ui) {
+		
+		if (isFilled)
+			ui.fillColor(color);
+		else
+			ui.lineColor(color);
+		
 		ui.drawOval(x, y, width, height, isFilled);
 	}
 }

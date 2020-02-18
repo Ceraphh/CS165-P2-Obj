@@ -5,8 +5,11 @@
 // Email : 831066972@cs.colostate.edu
 
 public class Triangle extends Primitive{
+	
 	private int color, x0, y0, x1, x2,y1,y2;
 	private boolean isFilled;
+	public Triangle() {}
+	
 	public Triangle(int x0, int y0, int x1, int y1, int x2, int y2) {
 		this.x0 = x0;
 		this.x1 = x1;

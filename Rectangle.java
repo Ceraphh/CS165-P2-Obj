@@ -22,6 +22,10 @@ public class Rectangle extends Primitive {
 		this.isFilled = isFilled;
 	}
 	public void draw(UserInterface ui) {
+		if (isFilled)
+			ui.fillColor(color);
+		else
+			ui.lineColor(color);
 		ui.drawRectangle(x, y, width, height, isFilled);
 
 	}

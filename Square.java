@@ -26,6 +26,10 @@ public class Square extends  Primitive{
 		
 
 	public void draw(UserInterface ui) {
+		if (isFilled)
+			ui.fillColor(color);
+		else
+			ui.lineColor(color);
 		//what do i do here?
 		//do i use an interface, make a graphic object, etc
 		//how do i call the drawRect method, assuming thats what i want. i guess I am over

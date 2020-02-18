@@ -107,6 +107,14 @@ public class DrawProgram {
                          tri.setFilled(fields[7].equals("filled"));
                          primitives.add(tri);
                     // YOUR CODE HERE - add circle
+                    case "CIRCLE":
+                    	x0 = Integer.parseInt(fields[2]);
+                        y0 = Integer.parseInt(fields[3]);
+                        radius = Integer.parseInt(fields[4]);
+                        Circle cir = new Circle(x0,y0,radius);
+                        cir.setColor(Integer.parseInt(fields[1], 16));
+                        cir.setFilled(fields[7].equals("filled"));                        
+                    	
                     // YOUR CODE HERE - add oval
                 }
             }
@@ -136,8 +144,6 @@ public class DrawProgram {
             	((Circle)primitive).draw(ui);
             else if (primitive instanceof Oval)
             	((Oval)primitive).draw(ui);
-            else if (primitive instanceof Text)
-            	((Text)primitive).draw(ui);
 
             // YOUR CODE HERE - add triangle
 
